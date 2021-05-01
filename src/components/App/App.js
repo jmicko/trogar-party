@@ -8,6 +8,11 @@ function App() {
           Trogar Party
         </p>
       </header>
+      <main>
+        <p>
+          Let's play Dungeons and Dragons!
+        </p>
+      </main>
     </div>
   );
 }
