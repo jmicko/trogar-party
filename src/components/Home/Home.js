@@ -6,9 +6,9 @@ import { connect } from 'react-redux';
 // value setup. When making a new component be sure to replace
 // the component name TemplateClass with the name for the new
 // component.
-class Character extends Component {
+class Home extends Component {
   state = {
-    heading: 'Character Component',
+    heading: 'Home Component',
   };
 
   render() {
@@ -20,6 +20,4 @@ class Character extends Component {
   }
 }
 
-// change this line later when adding redux to --> connect(mapStoreToProps)(Character)
-
-export default Character;
+export default Home;
