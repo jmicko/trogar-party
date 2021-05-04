@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import mapStoreToProps from '../../redux/mapStoreToProps';
+import mapStoreToProps from '../../redux/mapStoreToProps';
 
 // Basic class component structure for React with default state
 // value setup. When making a new component be sure to replace
@@ -15,6 +15,9 @@ class Character extends Component {
     return (
       <div>
         <h2>{this.state.heading}</h2>
+        <div>
+          <button>test reducer</button>
+        </div>
       </div>
     );
   }
@@ -22,4 +25,4 @@ class Character extends Component {
 
 // change this line later when adding redux to --> connect(mapStoreToProps)(Character)
 
-export default Character;
+export default connect(mapStoreToProps)(Character);

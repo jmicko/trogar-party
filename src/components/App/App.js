@@ -5,6 +5,7 @@ import {
   // Redirect,
   // Switch,
 } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 // Directory imports
 import Character from '../Character/Character'
@@ -51,4 +52,4 @@ function App() {
   );
 }
 
-export default App;
+export default connect()(App);

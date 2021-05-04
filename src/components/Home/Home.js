@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+// import { connect } from 'react-redux';
 // import mapStoreToProps from '../../redux/mapStoreToProps';
 
 // Basic class component structure for React with default state
@@ -15,6 +16,9 @@ class Home extends Component {
     return (
       <div>
         <h2>{this.state.heading}</h2>
+        <Link to="character">
+          character
+        </Link>
       </div>
     );
   }
