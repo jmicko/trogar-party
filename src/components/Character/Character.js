@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
 
@@ -15,8 +16,21 @@ class Character extends Component {
     return (
       <div>
         <h2>{this.state.heading}</h2>
+        <p>
+          {JSON.stringify(this.props)}
+        </p>
+        <Link to="/">
+          home
+        </Link>
         <div>
-          <button>test reducer</button>
+          <button
+            onClick={() => {this.props.dispatch({ type: 'RETURN_TEST_1' });}}>
+            test 1 reducer
+          </button>
+          <button
+            onClick={() => {this.props.dispatch({ type: 'RETURN_TEST_2' });}}>
+            test 2 reducer
+          </button>
         </div>
       </div>
     );
