@@ -12,6 +12,12 @@ class Character extends Component {
     heading: 'Character Component',
   };
 
+  sagaTest = (event) => {
+    this.props.dispatch({
+      type: 'TEST_SAGA',
+    });
+  }
+
   render() {
     return (
       <div>
@@ -30,6 +36,10 @@ class Character extends Component {
           <button
             onClick={() => {this.props.dispatch({ type: 'RETURN_TEST_2' });}}>
             test 2 reducer
+          </button>
+          <button
+            onClick={() => {this.props.dispatch({ type: 'TEST_SAGA' });}}>
+            test 3 saga
           </button>
         </div>
       </div>

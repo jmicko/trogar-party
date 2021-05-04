@@ -8,6 +8,8 @@ const testReducer = (state = '', action) => {
         return 'TEST 1';
       case 'RETURN_TEST_2':
         return 'TEST 2';
+      case 'RETURN_TEST_3':
+        return `SAGA WORKS: ${action.payload}`;
       default:
         return state;
     }
