@@ -8,6 +8,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
   // GET route code here
   console.log('in the server test GET route');
+  res.send('hello from the backend server!');
 });
 
 /**

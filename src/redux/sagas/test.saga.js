@@ -19,14 +19,14 @@ function* testSagaFile(action) {
 function* testServerFile(action) {
     try {
         console.log('in the test server saga function');
-        yield axios.get('/api/test/');
-        // const response = yield axios.get('/api/test');
-        console.log('back from server', 'response');
+        // yield axios.get('/api/test/');
+        const response = yield axios.get('/api/test');
+        console.log('back from server', response);
 
         // now that the session has ended on the server
         // remove the client-side user object to let
         // the client-side code know the user is logged out
-        yield put({ type: 'RETURN_TEST_3', payload: 'payload from saga file' });
+        yield put({ type: 'RETURN_TEST_3', payload: response.data });
     } catch (error) {
         console.log('Feedback get request failed', error);
     }
