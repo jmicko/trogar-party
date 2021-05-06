@@ -26,7 +26,7 @@ function* testServerFile(action) {
         // now that the session has ended on the server
         // remove the client-side user object to let
         // the client-side code know the user is logged out
-        yield put({ type: 'RETURN_TEST_3', payload: response.data });
+        yield put({ type: 'RETURN_TEST_3', payload: response });
     } catch (error) {
         console.log('Feedback get request failed', error);
     }

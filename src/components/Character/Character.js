@@ -45,6 +45,7 @@ class Character extends Component {
             onClick={() => { this.props.dispatch({ type: 'TEST_SERVER' }); }}>
             test server
           </button>
+          {/* {if } */}
         </div>
       </div>
     );

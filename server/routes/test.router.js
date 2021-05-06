@@ -1,4 +1,5 @@
 const express = require('express');
+const pool = require('../modules/pool');
 
 const router = express.Router();
 
@@ -8,7 +9,21 @@ const router = express.Router();
 router.get('/', (req, res) => {
   // GET route code here
   console.log('in the server test GET route');
-  res.send('hello from the backend server!');
+  const queryText = `
+  SELECT * FROM "test";`;
+  pool.query(queryText)
+  .then((result) => {
+    console.log(result.rows);
+    const RESPONSE = {
+      message: `hello from the backend server!`,
+      db: result.rows
+    }
+    res.send(RESPONSE);
+  })
+  .catch((error) => {
+    console.log('work request GET failed: ', error);
+    res.sendStatus(500);
+  });
 });
 
 /**
