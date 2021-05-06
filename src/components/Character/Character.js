@@ -30,16 +30,20 @@ class Character extends Component {
         </Link>
         <div>
           <button
-            onClick={() => {this.props.dispatch({ type: 'RETURN_TEST_1' });}}>
+            onClick={() => { this.props.dispatch({ type: 'RETURN_TEST_1' }); }}>
             test 1 reducer
           </button>
           <button
-            onClick={() => {this.props.dispatch({ type: 'RETURN_TEST_2' });}}>
+            onClick={() => { this.props.dispatch({ type: 'RETURN_TEST_2' }); }}>
             test 2 reducer
           </button>
           <button
-            onClick={() => {this.props.dispatch({ type: 'TEST_SAGA' });}}>
-            test 3 saga
+            onClick={() => { this.props.dispatch({ type: 'TEST_SAGA' }); }}>
+            test saga
+          </button>
+          <button
+            onClick={() => { this.props.dispatch({ type: 'TEST_SERVER' }); }}>
+            test server
           </button>
         </div>
       </div>
