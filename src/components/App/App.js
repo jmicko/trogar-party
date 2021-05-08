@@ -8,22 +8,14 @@ import {
 import { connect } from 'react-redux';
 
 // Directory imports
-import Character from '../Character/Character'
-import Home from '../Home/Home'
+import Character from '../Character/Character';
+import Home from '../Home/Home';
+import Nav from '../Nav/Nav';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Trogar Party
-        </p>
-      </header>
-      <main>
-        <p>
-          Let's play Dungeons and Dragons!
-        </p>
-      </main>
+      <Nav />
       <Router>
           <Route 
           exact path="/character" 
